@@ -102,6 +102,7 @@ extension Object: _RealmCollectionValueInsideOptional {
     public convenience init(value: Any) {
         self.init()
         RLMInitializeWithValue(self, value, .partialPrivateShared())
+        ApplyUUID(object: self)
     }
 
     // MARK: Properties
